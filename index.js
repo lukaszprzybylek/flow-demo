@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/public');
 
 app.get('/', function(request, response) {
-  var envName = process.env.APP_ENV;
+  var envName = process.env.APP_ENV || 'review';
   response.render('index.html', { env: envName});
 });
 
